@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uncle Joe - The Token You Didn't Know You Needed</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: #fefefe;
+    }
+    header {
+      background: #db3c30;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #fff;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .manifesto {
+      background-color: #1a1a1a;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-left: 5px solid #db3c30;
+    }
+    h2 {
+      color: #db3c30;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    a {
+      color: #db3c30;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>$UNCLEJOE</h1>
+    <p>The most honest scam you'll ever love.</p>
+  </header>
+
+  <section>
+    <div class="manifesto">
+      <h2>🇺🇸 Manifesto (EN)</h2>
+      <p>
+        Uncle Joe is not your financial advisor. He's your last line of defense against boring tokens and lifeless charts.
+        $UNCLEJOE is here to slap your portfolio into shape — hard, loud, and without apology. No roadmap. No promises. Just vibes, memes,
+        and possibly a Lambo. Or not. You decide.
+      </p>
+    </div>
+
+    <div class="manifesto">
+      <h2>🇫🇷 Manifeste (FR)</h2>
+      <p>
+        Uncle Joe n’est pas ton conseiller financier. C’est ton oncle de confiance… du genre qui t’attrape par le collet et t’apprend à investir 
+        comme un vrai. $UNCLEJOE ne promet rien sauf du chaos, des claques, et peut-être une retraite anticipée. C’est pas un token. C’est une leçon.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by degens, for degens. <br>
+    <a href="#">Follow Uncle Joe on X</a> | <a href="#">Join the Telegram</a></p>
+  </footer>
+</body>
+</html>
