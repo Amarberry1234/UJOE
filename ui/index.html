@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UJOE Local Agent</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f0f0f; color:#fefefe; margin:0; }
+    header { background:#db3c30; padding:1rem; text-align:center; }
+    main { max-width:960px; margin:auto; padding:2rem; }
+    textarea, input { width:100%; padding:0.75rem; margin:0.5rem 0; background:#1a1a1a; color:#fff; border:1px solid #333; }
+    button { background:#db3c30; color:#fff; border:none; padding:0.75rem 1.25rem; cursor:pointer; }
+    pre { background:#111; padding:1rem; overflow:auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>UJOE Agent Console</h1>
+    <p>Local-only orchestration with sandboxed tools.</p>
+  </header>
+  <main>
+    <label>Goal</label>
+    <textarea id="goal" rows="3">Résume les documents locaux.</textarea>
+    <label>Max iterations</label>
+    <input id="iters" type="number" value="2" min="1" max="6" />
+    <button onclick="runAgent()">Run Agent</button>
+    <pre id="output">Awaiting run...</pre>
+  </main>
+  <script>
+    async function runAgent() {
+      const goal = document.getElementById('goal').value;
+      const max_iters = parseInt(document.getElementById('iters').value, 10);
+      const res = await fetch('/agent/run', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ goal, max_iters })
+      });
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

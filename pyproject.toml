@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uj0e"
+version = "0.1.0"
+description = "Local agent orchestrator with model serving, sandboxing, and observability."
+authors = [{name = "Uncle Joe"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "pydantic",
+  "httpx",
+  "langchain-core",
+  "langgraph",
+  "chromadb",
+  "sentence-transformers",
+  "numpy",
+  "prometheus_client",
+  "opentelemetry-sdk",
+  "opentelemetry-exporter-otlp",
+  "opentelemetry-instrumentation-fastapi",
+  "python-multipart",
+  "tenacity"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "black",
+  "ruff"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["uj0e*", "scripts*"]
